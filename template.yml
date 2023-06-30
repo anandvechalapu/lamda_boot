@@ -1,12 +1,12 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: AWS Serverless Spring Boot 2 API - com.sacral.lamda::SAC-625
+Description: AWS Serverless Spring Boot 2 API - com.sacral.lamda::BBP-17
 Globals:
   Api:
     EndpointConfiguration: REGIONAL
 
 Resources:
-  Sac625Function:
+  Bbp17Function:
     Type: AWS::Serverless::Function
     Properties:
       Handler: com.sacral.lamda.StreamLambdaHandler::handleRequest
@@ -23,8 +23,8 @@ Resources:
             Method: any
 
 Outputs:
-  Sac625Api:
+  Bbp17Api:
     Description: URL for application
     Value: !Sub 'https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/ping'
     Export:
-      Name: Sac625Api
+      Name: Bbp17Api
